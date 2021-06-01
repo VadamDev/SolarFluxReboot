@@ -1,0 +1,33 @@
+itemGroup.solarfluxreboottab=Solar Flux: Reboot
+
+item.mirror.name=Mirror
+
+item.photovoltaic_cell.1.name=Photovoltaic Cell I
+item.photovoltaic_cell.2.name=Photovoltaic Cell II
+item.photovoltaic_cell.3.name=Photovoltaic Cell III
+item.photovoltaic_cell.4.name=Photovoltaic Cell IV
+item.photovoltaic_cell.5.name=Photovoltaic Cell V
+item.photovoltaic_cell.6.name=Photovoltaic Cell VI
+item.photovoltaic_cell.7.name=Mana Infused Photovoltaic Cell
+
+item.chaotic_energy_core.name=Chaotic Energy Core
+
+tile.solar_panel_1.name=Solar Panel I
+tile.solar_panel_2.name=Solar Panel II
+tile.solar_panel_3.name=Solar Panel III
+tile.solar_panel_4.name=Solar Panel IV
+tile.solar_panel_5.name=Solar Panel V
+tile.solar_panel_6.name=Solar Panel VI
+tile.solar_panel_7.name=Solar Panel VII
+tile.solar_panel_8.name=Solar Panel VIII
+
+tile.solar_panel_9.name=Wyvern Solar Panel
+tile.solar_panel_10.name=Draconic Solar Panel
+tile.solar_panel_11.name=Chaotic Solar Panel
+
+tile.solar_panel_12.name=Neutronium Solar Panel
+tile.solar_panel_13.name=Solar Panel Of Infinity
+
+tile.solar_panel_14.name=Manasteel Solar Panel
+tile.solar_panel_15.name=Elementium Solar Panel
+tile.solar_panel_16.name=Terrasteel Solar Panel
