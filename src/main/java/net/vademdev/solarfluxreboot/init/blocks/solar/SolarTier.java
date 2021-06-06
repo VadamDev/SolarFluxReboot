@@ -23,8 +23,8 @@ public enum SolarTier {
     TIER_INFINITY(13, Dependency.AVARITIA, 16777216, 65536000  , 2147483640),
 
     TIER_MANASTEEL(14, Dependency.BOTANIA, 512, 4096, 8000000),
-    TIER_ELEMENTIUM(15, Dependency.BOTANIA, 5461, 42600, 21000000),
-    TIER_TERRASTEEL(16, Dependency.BOTANIA, 16384, 128000, 64000000);
+    TIER_ELEMENTIUM(15, Dependency.BOTANIA, 3072, 12288, 24000000),
+    TIER_TERRASTEEL(16, Dependency.BOTANIA, 8192, 64000, 64000000);
 
     private int index, energyGeneration, energyTransfer, energyCapacity;
     private Dependency dependency;

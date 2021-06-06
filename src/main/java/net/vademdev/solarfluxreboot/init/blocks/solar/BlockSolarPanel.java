@@ -65,13 +65,11 @@ public class BlockSolarPanel extends BlockBase implements IWrenchable {
 
     @Override
     public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int pSide, float dX, float dY, float dZ) {
+        if(world.isRemote) return false;
+
         if(onWrench(this, world, x, y, z, player)) return true;
 
-        if(world.isRemote) {
-            player.openGui(Main.instance, 0, world, x, y, z);
-            return true;
-        }
-
+        player.openGui(Main.instance, 0, world, x, y, z);
         return false;
     }
 

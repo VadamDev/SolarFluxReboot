@@ -11,6 +11,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ModBlocks {
+    public static Block solar_panel_icon;
+
     public static Map<SolarTier, Block> solarMap = new HashMap<>();
 
     public ModBlocks() {
@@ -22,6 +24,7 @@ public class ModBlocks {
 
     private void initBlocks() {
         for (SolarTier value : SolarTier.values()) if(value.isDependencyActive()) solarMap.put(value, value.getSolarTierAsSolar());
+        solar_panel_icon = solarMap.get(SolarTier.TIER_8);
     }
 
     private void initTilesEntities() {

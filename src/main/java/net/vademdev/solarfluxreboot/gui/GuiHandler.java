@@ -1,29 +1,26 @@
 package net.vademdev.solarfluxreboot.gui;
 
-import cpw.mods.fml.common.network.IGuiHandler;
+import cpw.mods.fml.relauncher.Side;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.world.World;
+import net.vademdev.solarfluxreboot.core.gui.AdvancedGuiHandler;
 import net.vademdev.solarfluxreboot.init.tileentity.TileEntitySolarPanel;
 
-public class GuiHandler implements IGuiHandler {
+public class GuiHandler extends AdvancedGuiHandler {
     @Override
-    public Object getServerGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
-        TileEntity te = world.getTileEntity(x, y, z);
+    public Object getGuiElement(int ID, EntityPlayer player, TileEntity tileEntity, Side side) {
+        switch(side) {
+            case SERVER:
+                if(tileEntity instanceof TileEntitySolarPanel) {
+                    return new ContainerSolarPanel((TileEntitySolarPanel) tileEntity, player.inventory);
+                }
+                break;
+            case CLIENT:
+                if(tileEntity instanceof TileEntitySolarPanel) {
+                    return new GuiSolarPanel((TileEntitySolarPanel) tileEntity, player.inventory);
+                }
 
-        if(te instanceof TileEntitySolarPanel) {
-            return new ContainerSolarPanel(player.inventory);
-        }
-
-        return null;
-    }
-
-    @Override
-    public Object getClientGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
-        TileEntity te = world.getTileEntity(x, y, z);
-
-        if(te instanceof TileEntitySolarPanel) {
-            return new GuiSolarPanel((TileEntitySolarPanel) te, player.inventory);
+                break;
         }
 
         return null;
