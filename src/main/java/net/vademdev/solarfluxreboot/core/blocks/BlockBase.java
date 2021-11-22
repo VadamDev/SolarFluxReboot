@@ -1,9 +1,7 @@
 package net.vademdev.solarfluxreboot.core.blocks;
 
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockSlab;
 import net.minecraft.block.material.Material;
-import net.vademdev.solarfluxreboot.init.ModBlocks;
 
 public class BlockBase extends Block {
     private boolean defaultLoaded;

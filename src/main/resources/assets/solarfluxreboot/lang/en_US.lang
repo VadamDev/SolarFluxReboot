@@ -8,8 +8,14 @@ item.photovoltaic_cell.3.name=Photovoltaic Cell III
 item.photovoltaic_cell.4.name=Photovoltaic Cell IV
 item.photovoltaic_cell.5.name=Photovoltaic Cell V
 item.photovoltaic_cell.6.name=Photovoltaic Cell VI
+item.photovoltaic_cell.7.name=Mana Photovoltaic Cell
+item.photovoltaic_cell.8.name=Elementium Photovoltaic Cell
+item.photovoltaic_cell.9.name=Terrasteel Photovoltaic Cell
 
 item.chaotic_energy_core.name=Chaotic Energy Core
+
+item.villager_disk.name=Music Disc
+item.record.SolarFluxReboot:villager.nose.desc=§kUnknown §7- Nose Music
 
 tile.solar_panel_1.name=Solar Panel I
 tile.solar_panel_2.name=Solar Panel II
@@ -30,3 +36,18 @@ tile.solar_panel_13.name=Solar Panel Of Infinity
 tile.solar_panel_14.name=Manasteel Solar Panel
 tile.solar_panel_15.name=Elementium Solar Panel
 tile.solar_panel_16.name=Terrasteel Solar Panel
+
+achievement.SolarFluxReboot:ecologist=Ecologist
+achievement.SolarFluxReboot:ecologist.desc=Craft your first solar panel
+
+achievement.SolarFluxReboot:wyvern_power=Wyvern Power
+achievement.SolarFluxReboot:wyvern_power.desc=Craft a wyvern solar panel
+achievement.SolarFluxReboot:draconic_power=Draconic Power
+achievement.SolarFluxReboot:draconic_power.desc=Craft a draconic solar panel
+achievement.SolarFluxReboot:chaotic_power=Chaotic Power
+achievement.SolarFluxReboot:chaotic_power.desc=Craft a chaotic solar panel
+
+achievement.SolarFluxReboot:neutronium_power=Neutronium Power
+achievement.SolarFluxReboot:neutronium_power.desc=Chunk Loaders are great
+achievement.SolarFluxReboot:infinity_power=Infinity Power
+achievement.SolarFluxReboot:infinity_power.desc=You're a legend.

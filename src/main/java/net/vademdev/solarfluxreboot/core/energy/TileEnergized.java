@@ -34,9 +34,10 @@ public abstract class TileEnergized extends TileEntity implements IEnergyHandler
     public void outputEnergy() {
         for (ForgeDirection vd : ForgeDirection.VALID_DIRECTIONS) {
             TileEntity te = getWorldObj().getTileEntity(this.xCoord + vd.offsetX, this.yCoord + vd.offsetY, this.zCoord + vd.offsetZ);
-            if(te instanceof IEnergyHandler || te instanceof IEnergyReceiver || te instanceof IEnergyStorage) {
-                extractEnergy(vd, ((IEnergyHandler)te).receiveEnergy(vd.getOpposite(), extractEnergy(vd, this.storage.getMaxExtract(), true), false), false);
-            }
+            if(te instanceof IEnergyReceiver)
+                extractEnergy(vd, ((IEnergyReceiver) te).receiveEnergy(vd.getOpposite(), extractEnergy(vd, this.storage.getMaxExtract(), true), false), false);
+            else if(te instanceof IEnergyStorage)
+                extractEnergy(vd, ((IEnergyStorage) te).receiveEnergy(extractEnergy(vd, this.storage.getMaxExtract(), true), false), false);
         }
     }
 
@@ -60,5 +61,13 @@ public abstract class TileEnergized extends TileEntity implements IEnergyHandler
     @Override
     public int getMaxEnergyStored(ForgeDirection from) {
         return storage.getMaxEnergyStored();
+    }
+
+    public int getEnergyStored() {
+        return storage.getEnergyStored();
+    }
+
+    public void setEnergyStored(int energy) {
+        storage.setEnergyStored(energy);
     }
 }

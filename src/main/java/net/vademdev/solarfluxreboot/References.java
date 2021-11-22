@@ -9,5 +9,5 @@ public class References {
     public static final String MOD_NAME = "Solar Flux: Reboot";
     public static final String VERSION = "1.0.0";
 
-    public static final String DEPENDENCIES = "required-after:ThermalExpansion;after:Avaritia;after:DraconicEvolution";
+    public static final String DEPENDENCIES = "required-after:ThermalExpansion;after:Avaritia;after:DraconicEvolution;after:Botania";
 }

@@ -1,9 +1,6 @@
 package net.vademdev.solarfluxreboot.core.blocks;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
-import net.vademdev.solarfluxreboot.init.ModBlocks;
 import net.vademdev.solarfluxreboot.init.ModItems;
 
 public class ItemBase extends Item {

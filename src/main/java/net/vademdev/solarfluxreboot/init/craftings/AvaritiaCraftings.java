@@ -4,12 +4,12 @@ import fox.spiteful.avaritia.crafting.ExtremeCraftingManager;
 import net.minecraft.item.ItemStack;
 import net.vademdev.solarfluxreboot.dependencies.Dependency;
 import net.vademdev.solarfluxreboot.init.ModBlocks;
-import net.vademdev.solarfluxreboot.init.blocks.solar.SolarTier;
+import net.vademdev.solarfluxreboot.init.solar.SolarTier;
 
 public class AvaritiaCraftings implements ICraftingHandler {
     @Override
     public void registerOthersRecipies() {
-        ExtremeCraftingManager.getInstance().addRecipe(new ItemStack(ModBlocks.solarMap.get(SolarTier.TIER_NEUTRONIUM), 2), new Object[] {
+        ExtremeCraftingManager.getInstance().addRecipe(new ItemStack(ModBlocks.solarMap.get(SolarTier.TIER_NEUTRONIUM), 2),
                 "  nn nn  ",
                 " nmmsmmn ",
                 "nm  u  mn",
@@ -25,10 +25,10 @@ public class AvaritiaCraftings implements ICraftingHandler {
                 's', ModBlocks.solarMap.get(SolarTier.TIER_8), //SOLAR
                 'u', Dependency.AVARITIA.getItemStackWithMetadata("Resource", 3), //NEUTRONIUM NUGGET
                 'p', Dependency.AVARITIA.getItemStackWithMetadata("Resource", 2), //NEUTRONIUM POWDER
-                'c', Dependency.AVARITIA.getItemStackWithMetadata("Resource", 5), //CATALYST
-        });
+                'c', Dependency.AVARITIA.getItemStackWithMetadata("Resource", 5) //CATALYST
+        );
 
-        ExtremeCraftingManager.getInstance().addRecipe(new ItemStack(ModBlocks.solarMap.get(SolarTier.TIER_INFINITY), 3), new Object[] {
+        ExtremeCraftingManager.getInstance().addRecipe(new ItemStack(ModBlocks.solarMap.get(SolarTier.TIER_INFINITY), 3),
                 "  nn nn  ",
                 " nmmbmmn ",
                 "nm  u  mn",
@@ -45,7 +45,7 @@ public class AvaritiaCraftings implements ICraftingHandler {
                 'u', Dependency.AVARITIA.getItemStackWithMetadata("Resource", 3), //NEUTRONIUM NUGGET
                 'p', Dependency.AVARITIA.getItemStackWithMetadata("Resource", 2), //NEUTRONIUM POWDER
                 'i', Dependency.AVARITIA.getItemStackWithMetadata("Resource", 6), //INFINITY INGOT
-                's', ModBlocks.solarMap.get(SolarTier.TIER_NEUTRONIUM), //SOLAR
-        });
+                's', ModBlocks.solarMap.get(SolarTier.TIER_NEUTRONIUM) //SOLAR
+        );
     }
 }

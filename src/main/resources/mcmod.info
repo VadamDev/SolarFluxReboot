@@ -2,13 +2,13 @@
 {
   "modid": "SolarFluxReboot",
   "name": "Solar Flux: Reboot",
-  "description": "Solar Flux Reboot is a continuation of Solar Flux Reborn for 1.7.10.",
+  "description": "Solar Flux Reboot is a continuation of Solar Flux Reborn for 1.7.10.§l\n\nTexturing : 12robotboy\nIdea and Motivation : ZenoQwy",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
-  "authorList": ["VadamDev", "12robotboy", "ZenoQwy"],
-  "credits": "Thanks to: Nauktis for making the original SolarFlux and Zeitheron for making Solar Flux Reborn.",
+  "authorList": ["VadamDev"],
+  "credits": "Thanks to Nauktis for making SolarFlux and Zeitheron for making Solar Flux Reborn.",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []

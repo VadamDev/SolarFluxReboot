@@ -1,11 +1,9 @@
 package net.vademdev.solarfluxreboot.proxy;
 
-import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import net.vademdev.solarfluxreboot.Main;
-import net.vademdev.solarfluxreboot.dependencies.DependenciesManager;
-import net.vademdev.solarfluxreboot.dependencies.Dependency;
 import net.vademdev.solarfluxreboot.gui.GuiHandler;
+import net.vademdev.solarfluxreboot.init.ModAchievements;
 import net.vademdev.solarfluxreboot.init.ModBlocks;
 import net.vademdev.solarfluxreboot.init.ModCraftings;
 import net.vademdev.solarfluxreboot.init.ModItems;
@@ -20,6 +18,7 @@ public class CommonProxy {
 
     public void init() {
         ModCraftings.init();
+        ModAchievements.init();
 
         NetworkRegistry.INSTANCE.registerGuiHandler(Main.instance, new GuiHandler());
     }

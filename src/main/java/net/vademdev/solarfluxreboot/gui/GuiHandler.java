@@ -14,6 +14,7 @@ public class GuiHandler extends AdvancedGuiHandler {
                 if(tileEntity instanceof TileEntitySolarPanel) {
                     return new ContainerSolarPanel((TileEntitySolarPanel) tileEntity, player.inventory);
                 }
+
                 break;
             case CLIENT:
                 if(tileEntity instanceof TileEntitySolarPanel) {

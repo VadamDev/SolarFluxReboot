@@ -1,9 +1,7 @@
-package net.vademdev.solarfluxreboot.init.blocks.solar;
+package net.vademdev.solarfluxreboot.init.solar;
 
-import net.minecraft.block.Block;
 import net.vademdev.solarfluxreboot.References;
 import net.vademdev.solarfluxreboot.dependencies.Dependency;
-import net.vademdev.solarfluxreboot.init.ModTabs;
 
 public enum SolarTier {
     TIER_1(1, 1, 8, 25000),
@@ -20,7 +18,7 @@ public enum SolarTier {
     TIER_CHAOTIC(11, Dependency.DRACONIC_EVOLUTION, 524288, 4096000, 2048000000),
 
     TIER_NEUTRONIUM(12, Dependency.AVARITIA, 8388608 , 32768000 , 2147483640),
-    TIER_INFINITY(13, Dependency.AVARITIA, 16777216, 65536000  , 2147483640),
+    TIER_INFINITY(13, Dependency.AVARITIA, 33554432, 65536000  , 2147483640),
 
     TIER_MANASTEEL(14, Dependency.BOTANIA, 512, 4096, 8000000),
     TIER_ELEMENTIUM(15, Dependency.BOTANIA, 3072, 12288, 24000000),
@@ -49,10 +47,6 @@ public enum SolarTier {
         return dependency.isLoaded();
     }
 
-    public Dependency getDependency() {
-        return dependency;
-    }
-
     public int getEnergyGeneration() {
         return energyGeneration;
     }
@@ -65,15 +59,15 @@ public enum SolarTier {
         return energyCapacity;
     }
 
+    public BlockSolarPanel getSolarTierAsSolar() {
+        return new BlockSolarPanel(this, "solar_panel_" + index);
+    }
+
     public String getTopIcon() {
         return topIcon;
     }
 
     public String getSideIcon() {
         return sideIcon;
-    }
-
-    public Block getSolarTierAsSolar() {
-        return new BlockSolarPanel(this).setBlockName("solar_panel_" + index).setCreativeTab(ModTabs.tab);
     }
 }

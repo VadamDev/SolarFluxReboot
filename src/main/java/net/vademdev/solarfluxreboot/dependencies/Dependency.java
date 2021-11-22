@@ -9,7 +9,6 @@ import net.vademdev.solarfluxreboot.init.craftings.*;
 
 public enum Dependency {
     THERMAL_EXPENTION("ThermalExpansion", new DefaultCraftings(), true),
-    //THAUMCRAFT("Thaumcraft", null, false),
     BOTANIA("Botania", new BotaniaCraftings(), false),
     DRACONIC_EVOLUTION("DraconicEvolution", new DraconicEvolutionCraftings(), false),
     AVARITIA("Avaritia", new AvaritiaCraftings(), false);

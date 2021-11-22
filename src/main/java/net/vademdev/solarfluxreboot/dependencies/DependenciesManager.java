@@ -4,7 +4,6 @@ import cpw.mods.fml.common.Loader;
 import net.vademdev.solarfluxreboot.References;
 import net.vademdev.solarfluxreboot.core.utils.Logger;
 
-import javax.swing.plaf.BorderUIResource;
 import java.util.HashMap;
 import java.util.Map;
 

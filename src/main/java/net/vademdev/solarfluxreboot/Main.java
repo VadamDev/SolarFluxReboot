@@ -4,7 +4,6 @@ import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import net.vademdev.solarfluxreboot.core.utils.Logger;
 import net.vademdev.solarfluxreboot.dependencies.DependenciesManager;
 import net.vademdev.solarfluxreboot.proxy.CommonProxy;
 
@@ -13,11 +12,10 @@ public class Main {
     @Mod.Instance(References.MOD_ID)
     public static Main instance;
 
-    @SidedProxy(clientSide = "net.vademdev.solarfluxreboot.proxy.ClientProxy",
-                serverSide = "net.vademdev.solarfluxreboot.proxy.CommonProxy")
+    @SidedProxy(clientSide = "net.vademdev.solarfluxreboot.proxy.ClientProxy", serverSide = "net.vademdev.solarfluxreboot.proxy.CommonProxy")
     public static CommonProxy proxy;
 
-    public final DependenciesManager dependenciesManager = new DependenciesManager();
+    public DependenciesManager dependenciesManager = new DependenciesManager();
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {

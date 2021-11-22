@@ -14,12 +14,10 @@ import java.util.List;
 
 public class ItemPhotovoltaicCell extends ItemBase {
     private String[] types;
-
-    @SideOnly(Side.CLIENT)
     private IIcon[] icons;
 
     public ItemPhotovoltaicCell() {
-        if(Dependency.BOTANIA.isLoaded()) types = new String[] {"1", "2", "3", "4", "5", "6", "7"};
+        if(Dependency.BOTANIA.isLoaded()) types = new String[] {"1", "2", "3", "4", "5", "6", "7", "8", "9"};
         else types = new String[] {"1", "2", "3", "4", "5", "6"};
 
         icons = new IIcon[types.length];
@@ -34,16 +32,19 @@ public class ItemPhotovoltaicCell extends ItemBase {
         return super.getUnlocalizedName() + "." + types[metadata];
     }
 
+    @Override
     @SideOnly(Side.CLIENT)
     public void registerIcons(IIconRegister reg) {
         for(int i = 0; i < types.length; i++) icons[i] = reg.registerIcon(iconString + "_" + types[i]);
     }
 
+    @Override
     @SideOnly(Side.CLIENT)
     public void getSubItems(Item item, CreativeTabs creativeTabs, List list) {
         for(int metadata = 0; metadata < types.length; metadata++) list.add(new ItemStack(item, 1, metadata));
     }
 
+    @Override
     @SideOnly(Side.CLIENT)
     public IIcon getIconFromDamage(int metadata) {
         return metadata < types.length && metadata >= 0 ? icons[metadata] : null;
